@@ -1,0 +1,16 @@
+
+
+trigger:
+- master
+
+
+pool:
+  vmImage: ubuntu-latest
+stages:
+   - stage: PROD
+     jobs:
+       - job: PROD_JOB
+         steps:
+              - script: echo Hello, world!
+                displayName: 'Run a one-line script'
+
