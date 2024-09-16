@@ -6,7 +6,7 @@ pool:
 stages:
   - stage: prod
     jobs:
-      - job : job a
+      - job : job
         steps:
           - script: echo "hello my love"
 
