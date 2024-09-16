@@ -1,0 +1,12 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+stages:
+  - stage: prod
+    jobs:
+      - job : job a
+        steps:
+          - script: echo "hello my love"
+
