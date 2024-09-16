@@ -18,4 +18,8 @@ stages:
   - stage: TEST
     jobs:
       - job: job_TEST
+  - stage: DEPLOY
+    jobs:
+      - job: job_depoly
     dependsOn: QA
+    
