@@ -6,7 +6,16 @@ pool:
 stages:
   - stage: prod
     jobs:
-      - job : job
+      - job: PROD_job
         steps:
           - script: echo "hello my love"
+  - stage: QA
+    jobs:
+      - job: QA_JOB
+        steps:
+          - script: echo "hello"
 
+  - stage: TEST
+    jobs:
+      - job: job_TEST
+    dependsOn: QA
