@@ -1,0 +1,19 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+stages:
+  - stage: PROD
+    jobs:
+      - job: JOB_PROD
+
+  - stage: TEST
+    dependsOn: []
+    jobs:
+      - job: JOB_TEST
+    
+  - stage: DEPOLY
+    jobs:
+      - job: JOB_DEPOLY
+
