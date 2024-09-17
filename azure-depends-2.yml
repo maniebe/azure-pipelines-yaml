@@ -5,11 +5,11 @@ pool:
   vmImage: ubuntu-latest
 stages:
   - stage: PROD
+    dependsOn: []
     jobs:
       - job: JOB_PROD
 
   - stage: TEST
-    dependsOn: []
     jobs:
       - job: JOB_TEST
     
