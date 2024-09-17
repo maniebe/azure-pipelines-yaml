@@ -14,6 +14,7 @@ stages:
       - job: JOB_TEST
     
   - stage: DEPOLY
+    dependsOn: []
     jobs:
       - job: JOB_DEPOLY
 
