@@ -12,9 +12,12 @@ stages:
     dependsOn: []
     jobs:
       - job: JOB_TEST
+  - stage: TEST2
+    dependsOn: PROD
+    jobs:
+      - job: job_test2
 
   - stage: DEPOLY
-    dependsOn: []
     jobs:
       - job: JOB_DEPOLY
 
