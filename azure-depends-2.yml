@@ -9,11 +9,11 @@ stages:
       - job: JOB_PROD
 
   - stage: TEST
+    dependsOn: []
     jobs:
       - job: JOB_TEST
 
   - stage: DEPOLY
-    dependsOn: []
     jobs:
       - job: JOB_DEPOLY
 
